@@ -1,0 +1,9 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.DataFrame({'link': ['a', 'b', 'c', 'd'], 'Count': [4.0, 2.0, 1.0, 3.0]})
+df_sorted = df.sort_values(by='Count')
+
+plt.bar(df_sorted['link'], df_sorted['Count'])
+plt.xlabel('link')
+plt.ylabel('Count')
+plt.show()
